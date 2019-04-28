@@ -32,6 +32,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 #  cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local .. && \
 #  make -j4 && make install && \
 #  ldconfig -v && \
+  cd /usr/src/shatabang/ && \
   npm install opencv4nodejs@$NODE_OPENCV_VERSION && \
 # Install ember
 #  yarn global add ember-cli && \
