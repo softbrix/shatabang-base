@@ -32,12 +32,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 #  cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local .. && \
 #  make -j4 && make install && \
 #  ldconfig -v && \
+# Create app directories
+  mkdir -p $STORAGE_DIR $CACHE_DIR $CLIENT_DIR && \
+  # Install the heavy modules in the base
   cd /usr/src/shatabang/ && \
   npm install opencv4nodejs@$NODE_OPENCV_VERSION && \
 # Install ember
 #  yarn global add ember-cli && \
-# Create app directories
-  mkdir -p $STORAGE_DIR $CACHE_DIR $CLIENT_DIR && \
 # Cleaning
 #  cd ~/ && rm -rf * && \
 #  apt-get remove -y \
@@ -46,5 +47,3 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 #  unzip && \
   apt autoremove -y && \
   rm -rf /var/lib/apt/lists/* 
-
-ENV OPENCV4NODEJS_DISABLE_AUTOBUILD 1
