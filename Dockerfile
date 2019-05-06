@@ -36,7 +36,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   mkdir -p $STORAGE_DIR $CACHE_DIR $CLIENT_DIR && \
   # Install the heavy modules in the base
   cd /usr/src/shatabang/ && \
-  touch package.json && \
+  npm init -y && \
   npm install --save opencv4nodejs@$NODE_OPENCV_VERSION && \
 # Install ember
 #  yarn global add ember-cli && \
