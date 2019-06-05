@@ -1,7 +1,7 @@
 FROM node:carbon-stretch
 
 # ENV OPENCV_VERSION 4.0.1
-ENV NODE_OPENCV_VERSION 4.15.0
+ENV NODE_OPENCV_VERSION 4.17.0
 ENV STORAGE_DIR /mnt/sorted/
 ENV CACHE_DIR /mnt/cache/
 ENV SERVER_DIR /usr/src/shatabang/
