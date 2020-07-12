@@ -1,4 +1,4 @@
-FROM node:10-stretch
+FROM node:lts
 
 # ENV OPENCV_VERSION 4.0.1
 ENV NODE_OPENCV_VERSION 4.17.0
